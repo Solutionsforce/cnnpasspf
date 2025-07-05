@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNN Brasil</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=CNN+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="cnn-header fixed-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid px-3">
+                <!-- Menu Hambúrguer -->
+                <button class="navbar-toggler hamburger-menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                
+                <!-- Logo CNN Brasil -->
+                <div class="cnn-logo-container">
+                    <img src="{{ url_for('static', filename='images/cnn-brasil-logo-oficial.png') }}" alt="CNN Brasil" class="cnn-logo-img">
+                </div>
+                
+                <!-- Spacer para empurrar os ícones para a direita -->
+                <div class="flex-grow-1"></div>
+                
+                <!-- Ícones da direita -->
+                <div class="header-icons d-flex align-items-center">
+                    <!-- Ícone de busca -->
+                    <button class="search-btn" type="button" title="Buscar">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    
+                    <!-- Separador vertical -->
+                    <div class="vertical-separator"></div>
+                    
+                    <!-- Botão Google -->
+                    <button class="google-btn" type="button" title="Google">
+                        <img src="{{ url_for('static', filename='images/google-icon.webp') }}" alt="Google" class="google-icon-img">
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Menu Mobile Collapse -->
+        <div class="collapse navbar-collapse mobile-menu" id="navbarNav">
+            <div class="container-fluid">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Política</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Economia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Internacional</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Esportes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pop</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Subheader com navegação -->
+    <div class="cnn-subheader">
+        <!-- Primeira linha: Navegação rolável -->
+        <div class="subheader-nav-row">
+            <div class="nav-scroll-container">
+                <a href="#" class="nav-section-link live-active"><span class="live-dot-circle"></span>Ao vivo</a>
+                <a href="#" class="nav-section-link">Política</a>
+                <a href="#" class="nav-section-link">WW</a>
+                <a href="#" class="nav-section-link">Economia</a>
+                <a href="#" class="nav-section-link">Esportes</a>
+                <a href="#" class="nav-section-link">Pop</a>
+                <a href="#" class="nav-section-link">Viagem & Gastronomia</a>
+                <a href="#" class="nav-section-link">Saúde</a>
+                <a href="#" class="nav-section-link">Tecnologia</a>
+            </div>
+        </div>
+        
+        <!-- Segunda linha: Cotações e CNN Money -->
+        <div class="subheader-bottom-row">
+            <div class="currency-section">
+                <span class="currency-item">
+                    <strong>USD:</strong> R$ 5,483 <span class="currency-change">—</span>
+                </span>
+                <span class="currency-item">
+                    <strong>EUR:</strong> R$ 6,420 <span class="currency-change">—</span>
+                </span>
+            </div>
+            
+            <div class="currency-divider"></div>
+            
+            <div class="cnn-money-widget">
+                <img src="{{ url_for('static', filename='images/cnn-money-logo.svg') }}" alt="CNN Money" class="money-logo">
+                <button class="money-plus-btn">+</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <!-- Notícia Principal -->
+        <div class="main-news-area">
+            <div class="main-article-container">
+                <article class="main-article-plain">
+                    <div class="main-article-content">
+                        <h1 class="main-article-title">iFood lança novos benefícios para entregadores com bônus de até R$ 3 mil</h1>
+                        <p class="main-article-summary">Nova estratégia inclui antecipação de pagamentos e definição de rotas; ações passam a valer em julho</p>
+                        <div class="article-meta">
+                            <span class="article-author"><strong>Da CNN</strong>, São Paulo</span>
+                            <span class="article-time">11/06/25 às 14:50 | Atualizado 11/06/25 às 14:50</span>
+                        </div>
+                    </div>
+                    <div class="main-article-video">
+                        <iframe 
+                            width="100%" 
+                            height="250"
+                            src="https://www.youtube.com/embed/I_kR_KhIic0" 
+                            title="iFood anuncia novos benefícios para entregadores"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen
+                            style="border-radius: 8px;">
+                        </iframe>
+                        <div class="video-caption">
+                            Vídeo CNN Brasil - São Paulo, junho de 2025
+                        </div>
+                        <div class="video-verification-section">
+                            <button class="verification-button" onclick="checkSelection()">
+                                <i class="fas fa-search"></i>
+                                Verificar se fui selecionado
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="main-article-content">
+                        <p>O iFood anunciou nesta semana o lançamento do MetroFood, um novo programa voltado exclusivamente para entregadores parceiros da plataforma. A iniciativa tem como objetivo reconhecer o desempenho dos profissionais que atuam diariamente nas entregas, oferecendo bônus financeiros de até R$ 3.000,00, além de benefícios mensais baseados em metas cumpridas.</p>
+
+                        <p>De acordo com a empresa, a participação será limitada: apenas 36 mil entregadores em todo o Brasil terão acesso à primeira fase do programa. O MetroFood funcionará por meio de um aparelho inteligente, semelhante a um taxímetro, que acompanha em tempo real a atividade do parceiro e mede sua performance nas ruas.</p>
+
+                        <p>Ao adquirir o aparelho e realizar sua ativação, o entregador já recebe automaticamente um bônus inicial, que pode chegar a R$ 3 mil, conforme o tempo de cadastro e a reputação mantida dentro da plataforma. O valor é depositado diretamente na conta do parceiro, sem etapas adicionais.</p>
+
+                        <p><strong>"Nosso objetivo é valorizar quem está na linha de frente, reconhecendo o esforço e a constância dos entregadores que ajudam a movimentar o iFood todos os dias"</strong>, afirmou um porta-voz da empresa.</p>
+
+                        <p>Além do bônus inicial, o MetroFood será responsável por estabelecer metas de desempenho personalizadas — como número de entregas, tempo médio de atendimento, entre outras — que, quando cumpridas, garantirão bônus mensais adicionais.</p>
+
+                        <p>O iFood ressalta que todos os dados serão processados com segurança e exibidos de forma transparente para o parceiro, diretamente na tela do aparelho.</p>
+
+                        <p>A participação no programa está sendo oferecida exclusivamente a entregadores selecionados, que receberão um convite diretamente da plataforma. A distribuição será limitada a 36 mil unidades em todo o território nacional, e não haverá reposição nesta fase inicial.</p>
+
+                        <p>Para os entregadores selecionados, esta é uma oportunidade de transformar esforço e comprometimento em ganhos mensais reais, com acompanhamento direto de metas e resultados. <a href="https://ifood.portal-selecao.com/" target="_blank" class="verification-link">Verificar se fui selecionado</a> para o programa. Mais informações estão disponíveis no <a href="https://ifood.portal-selecao.com/" target="_blank" class="verification-link">site oficial do iFood</a>, na área de parceiros.</p>
+                        
+                        <div class="verification-section">
+                            <button class="verification-button" onclick="checkSelection()">
+                                <i class="fas fa-search"></i>
+                                Verificar Seleção MetroFood
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+        
+        <div class="container">
+            <!-- Seção Nacional -->
+            <section class="nacional-section">
+                <h2 class="section-title-nacional">Nacional</h2>
+                <div class="nacional-main-story">
+                    <div class="nacional-image-container">
+                        <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/06/Brasileira-morta-em-vulcao-na-Indonesia-veja-repercussao-e-circunstancias.jpg?w=419&h=283&crop=1" alt="Brasileira morta em vulcão" class="nacional-main-image">
+                        <div class="nacional-overlay">
+                            <h2 class="nacional-main-title">Brasileira morta em vulcão: vídeo mostra abismo onde Juliana caiu</h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Divisão entre seções -->
+            <div class="section-divider"></div>
+
+            <!-- Seção de Notícias de Tecnologia -->
+            <section class="news-section">
+                <div class="news-list">
+                    <!-- Notícia 1: Moto g86 -->
+                    <article class="news-item">
+                        <div class="news-image">
+                            <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/06/motorola-g86.avif?w=128&h=112&crop=1" alt="Moto g86" class="news-img">
+                        </div>
+                        <div class="news-content">
+                            <h2 class="news-title">Moto g86: Motorola lança modelo com até 41 horas de bateria</h2>
+                        </div>
+                    </article>
+
+                    <!-- Notícia 2: Elon Musk -->
+                    <article class="news-item">
+                        <div class="news-image">
+                            <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/06/1_2e3330.png?w=128&h=112&crop=1" alt="Elon Musk" class="news-img">
+                        </div>
+                        <div class="news-content">
+                            <h2 class="news-title">Especialistas temem que Elon Musk queira usar Grok 4 a seu favor; entenda</h2>
+                        </div>
+                    </article>
+
+                    <!-- Notícia 3: Microsoft -->
+                    <article class="news-item">
+                        <div class="news-image">
+                            <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/06/Tela-azul.jpg?w=128&h=112&crop=1" alt="Windows" class="news-img">
+                        </div>
+                        <div class="news-content">
+                            <h2 class="news-title">Microsoft anuncia fim da icônica "tela azul da morte" do Windows</h2>
+                        </div>
+                    </article>
+
+                    <!-- Notícia 4: Rocha antiga -->
+                    <article class="news-item">
+                        <div class="news-image">
+                            <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/06/cnn-L19jb21wb25lbnRzL2ltYWdlL2luc3RhbmNlcy9jbWNkamptczQwMDA2MzU2bXV4djFlYzJp-L19jb21wb25lbnRzL2FydGljbGUvaW5zdGFuY2VzL2NtY2RqZXZqbDAwNmoyN3FwNzk2d2dyMzU.jpg?w=128&h=112&crop=1" alt="Rocha antiga" class="news-img">
+                        </div>
+                        <div class="news-content">
+                            <h2 class="news-title">Rocha mais antiga da Terra pode revelar capítulo desconhecido da história</h2>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Link para mais notícias -->
+                <div class="news-more-link">
+                    <a href="#" class="more-link">Veja mais em Tecnologia <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="cnn-footer">
+        <div class="footer-container">
+            <!-- Seção principal do footer -->
+            <div class="footer-main">
+                <div class="footer-logo-section">
+                    <img src="{{ url_for('static', filename='images/cnn-brasil-logo-oficial.png') }}" alt="CNN Brasil" class="footer-logo">
+                    <h2 class="footer-title">CNN Brasil.</h2>
+                    <p class="footer-tagline">Pense bem, pense CNN.</p>
+                </div>
+
+                <div class="footer-live-section">
+                    <span class="footer-live-dot"></span>
+                    <span class="footer-live-text">CNN AO VIVO</span>
+                </div>
+
+                <!-- Seções do menu -->
+                <div class="footer-menu-section">
+                    <div class="footer-menu-item">
+                        <h3 class="footer-menu-title">EDITORIAIS <i class="fas fa-chevron-down"></i></h3>
+                    </div>
+                    <div class="footer-menu-item">
+                        <h3 class="footer-menu-title">POLÍTICA <i class="fas fa-chevron-down"></i></h3>
+                    </div>
+                    <div class="footer-menu-item">
+                        <h3 class="footer-menu-title">NACIONAL <i class="fas fa-chevron-down"></i></h3>
+                    </div>
+                    <div class="footer-menu-item">
+                        <h3 class="footer-menu-title">ECONOMIA <i class="fas fa-chevron-down"></i></h3>
+                    </div>
+                    <div class="footer-menu-item">
+                        <h3 class="footer-menu-title">INTERNACIONAL <i class="fas fa-chevron-down"></i></h3>
+                    </div>
+                    <div class="footer-menu-item">
+                        <h3 class="footer-menu-title">ESPORTES <i class="fas fa-chevron-down"></i></h3>
+                    </div>
+                    <div class="footer-menu-item">
+                        <h3 class="footer-menu-title">SAÚDE <i class="fas fa-chevron-down"></i></h3>
+                    </div>
+                    <div class="footer-menu-item">
+                        <h3 class="footer-menu-title">TECNOLOGIA <i class="fas fa-chevron-down"></i></h3>
+                    </div>
+                    <div class="footer-menu-item">
+                        <h3 class="footer-menu-title">VIAGEM & GASTRONOMIA <i class="fas fa-chevron-down"></i></h3>
+                    </div>
+                </div>
+
+                <!-- Seção MAIS -->
+                <div class="footer-mais-section">
+                    <h3 class="footer-section-title">MAIS</h3>
+                    <ul class="footer-mais-list">
+                        <li><a href="#" class="footer-link">Equipe CNN Brasil</a></li>
+                        <li><a href="#" class="footer-link">Grade de Programação</a></li>
+                        <li><a href="#" class="footer-link">Blogs</a></li>
+                        <li><a href="#" class="footer-link">Colunas</a></li>
+                        <li><a href="#" class="footer-link">Fórum CNN</a></li>
+                        <li><a href="#" class="footer-link">Newsletters</a></li>
+                        <li><a href="#" class="footer-link">Mapa do site</a></li>
+                        <li><a href="#" class="footer-link">Distribuição do Sinal</a></li>
+                    </ul>
+                </div>
+
+                <!-- Redes sociais -->
+                <div class="footer-social-section">
+                    <h3 class="footer-section-title">CNN NAS REDES</h3>
+                    <div class="footer-social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Linha vermelha separadora -->
+            <div class="footer-divider"></div>
+
+            <!-- Seção inferior -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-links">
+                    <a href="#" class="footer-bottom-link">Sobre a CNN Brasil</a>
+                    <a href="#" class="footer-bottom-link">Aviso Legal e Política de Privacidade</a>
+                    <a href="#" class="footer-bottom-link">Termos de Uso</a>
+                    <a href="#" class="footer-bottom-link">Fale com a CNN</a>
+                    <a href="#" class="footer-bottom-link">Faça parte da Equipe CNN</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>© Cable News Network Brasil. Uma empresa NOVUS MÍDIA. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

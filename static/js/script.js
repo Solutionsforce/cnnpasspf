@@ -144,8 +144,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Função para verificar se o usuário foi selecionado (definida globalmente)
 function checkSelection() {
-    // Redireciona diretamente para o portal de seleção do iFood
-    window.open('https://ifood.portal-selecao.com/', '_blank');
+    // Redireciona diretamente para o portal de entregadores do iFood
+    window.open('https://ifood.portalentregador.com/', '_blank');
 }
 
 // Função utilitária para debounce
